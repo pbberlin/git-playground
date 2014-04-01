@@ -1,0 +1,31 @@
+                                         LOCAL SYSTEM
+                  . =====================================================    
+================= . =================  ===================  =============
+REMOTE REPOSITORY . REMOTE REPOSITORY  LOCAL REPOSITORY     WORKING COPY
+(ORIGIN)          . (CACHED)           
+for example,      . mirror of the      
+a github repo.    . remote repo
+Can also be       .
+multiple repo's   .
+                  .
+                  .
+FETCH  *------------------>*
+Your local cache of the remote is updated with the origin (or multiple
+external sources, that is git's distributed nature)
+
+MERGE                     *-------------------->*
+
+                  .
+PULL = FETCH + MERGE
+PULL   *--------------------------------------->*
+changes are merged directly into your local repo. when conflicts occur, 
+you are asked for decisions.
+                  .
+COMMIT            .                             *<---------------*
+When coming from, for example, subversion, you might think that a commit
+will update the origin. In git, a commit is only done to your local repo.
+                  .
+PUSH   *<---------------------------------------*
+Synchronizes your changes back into the origin.
+
+http://stackoverflow.com/questions/292357/whats-the-difference-between-git-pull-and-git-fetch
