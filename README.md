@@ -14,7 +14,7 @@ git config --global core.pager "less -FRSX"
 git config --global push.default tracking  
 
 
-git remote add origin git@github.com:pbberlin/playground.git
+git remote add origin_playground git@github.com:pbberlin/playground.git
 git clone
 
 # or
@@ -59,6 +59,10 @@ git push    origin        HEAD:refs/for/master
 # ===========================================================
 git fetch        # do NOT use git pull (mingling fetch+merge)
 git merge [branch]
+
+git merge origin_playground/master
+
+
 git mergetool
 git rebase
 
