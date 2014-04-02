@@ -51,24 +51,27 @@ Amend towards last commit
 
 Amend towards a gerrit repo
     git commit  --amend            # push typos posthumously ,  omit -m
-[im Editor]
-    <paste last change ID from http gerrit>ENTER
+    
+*im Editor*
+    [paste last change ID from http gerrit]ENTER
     ENTER
-    [my amend comment]
+    [enter my amend comment]
 
 Adding notes
     git notes add   # adding to last commit - does not change history
 
 
 
-## Pushing - non puppet
+## Pushing - non Gerrit
     git push
     git push -u [remote_repo]            [branch]  # -u for upstream - setting up tracking , default for branch is current
     git push -u  github_pbberlin_playground    master  #  example
 
 
-## Pushing - to puppet
-    git push    origin        HEAD:refs/for/master   # 
+## Pushing - to Gerrit
+Here we push to the magic branch that creates reviews that target the master branch. 
+For every branch Gerrit tracks there is a magic refs/for/<branch_name> that you push to to create reviews.
+    git push    origin        HEAD:refs/for/master   
 
 ## If Remote Changes have Occurred:
     git fetch        # do NOT use git pull (mingling fetch+merge)
@@ -114,12 +117,6 @@ See git squash and pick
 For example
     git reset --hard 48cffce1fe
     
-# touch1
-    
-    
-    
-    
-
 
 ## Preserve Uncommitted Changes when Changing Branches
     git stash
