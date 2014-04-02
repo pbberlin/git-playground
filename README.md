@@ -93,7 +93,9 @@ For example
 
    
 Instead of merging, there is also rebase.
+
 Beware of rebasing towards public repos, cause it changes previous commits and forces other contributors to repeat their merging work.
+
    git rebase # extreme caution !
 
 
@@ -127,5 +129,5 @@ For example
     git reset --hard 48cffce1fe
     
 
-## Preserve Uncommitted Changes when Changing Branches
+### Preserve Uncommitted Changes when Changing Branches
     git stash
