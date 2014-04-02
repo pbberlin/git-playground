@@ -103,6 +103,10 @@ Beware of rebasing towards public repos, cause it changes previous commits and f
 
 # Analyse - big picture
     gitk
+    
+    git branch -a
+    git branch -r
+    
     git log
     git log --oneline --decorate       #  Show branches, tags in git log
 
