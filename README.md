@@ -87,9 +87,8 @@ For every branch Gerrit tracks there is a magic refs/for/<branch_name> that you 
     git merge [branch]
 
 For example
+
     git merge github_pbberlin_playground/master
-
-
     git mergetool
 
    
@@ -124,6 +123,7 @@ See git squash and pick
 ## Going Back 
     git reset --hard [target commit hash ] 
 For example
+
     git reset --hard 48cffce1fe
     
 
