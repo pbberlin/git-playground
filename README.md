@@ -59,10 +59,10 @@ Amend towards a gerrit repo
     git commit  --amend            # push typos posthumously ,  omit -m
     
 *im Editor*
-```bash
-    [paste last change ID from http gerrit]ENTER
-    ENTER
-    [enter my amend comment]
+```Shell
+[paste last change ID from http gerrit]ENTER
+ENTER
+[enter my amend comment]
 ```
 
 Adding notes
