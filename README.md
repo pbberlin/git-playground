@@ -80,6 +80,7 @@ Adding notes
 ## Pushing - to Gerrit
 Here we push to the magic branch that creates reviews that target the master branch. 
 For every branch Gerrit tracks there is a magic refs/for/<branch_name> that you push to to create reviews.
+
     git push    origin        HEAD:refs/for/master   
 
 ## If Remote Changes have Occurred:
@@ -96,7 +97,7 @@ Instead of merging, there is also rebase.
 
 Beware of rebasing towards public repos, cause it changes previous commits and forces other contributors to repeat their merging work.
 
-   git rebase # extreme caution !
+    git rebase # extreme caution !
 
 
 # Analyse - big picture
