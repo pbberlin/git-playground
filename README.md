@@ -9,9 +9,13 @@ git config --global user.email "peter.buchmann@idealo.de"
 git config --global color.ui auto
 git config --global core.pager "less -FRSX"
 
-
 # prevent git from pushing ALL branches that have the same name on the remote
 git config --global push.default tracking  
+
+
+# komplett neues Repository anlegen
+cd [working dir]
+git init  
 
 
 git remote add origin_playground git@github.com:pbberlin/playground.git
@@ -19,6 +23,10 @@ git clone
 
 # or
 git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git
+
+# rename remote repo
+    git remote -v
+    git remote rename [old_name]  [new_name]
 
 
 # making changes
@@ -32,13 +40,17 @@ git checkout -t origin/feature
 git branch [-d], checkout
 
 
-git add xxx                            #files I want push to gerrit
+git add [files]                            # stage files, files I want push to repo ORIGIN or repo GERRIT
+git rm  [files]                            # unstage
 
 git commit    -m "my commit message"   
-git commit -a -m "my commit message"   # -a => committing changes to ALL tracked files
+
+git commit -a -m "my commit message"   # -a => committing not just the staged files - since last ADD, but ALL
+git commit -a -m "my commit message"   --amend
 
 
-git commit  --amend			# push typos posthumously , -m omit
+# Amend towards a gerrit repo
+git commit  --amend			# push typos posthumously ,  omit -m
 #[im Editor]
   <last change ID from http gerrit> ENTER ENTER [my amend comment]
 
