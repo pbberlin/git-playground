@@ -63,9 +63,8 @@ Adding notes
 
 ## Pushing - non puppet
     git push
-    git push -u [remote_repo]                [branch]  # -u for upstream - setting up tracking , default for branch is current
+    git push -u [remote_repo]            [branch]  # -u for upstream - setting up tracking , default for branch is current
     git push -u  github_pbberlin_playground    master  #  example
-
 
 
 ## Pushing - to puppet
