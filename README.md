@@ -1,5 +1,5 @@
-# init
-# =================================================================================
+init
+=================================================================================
 apt-get install git
 apt-get install gitk
 
@@ -21,8 +21,8 @@ git clone
 git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git
 
 
-# making changes
-# ===========================================================
+making changes
+===========================================================
 
 # creating and checking out a feature branch that tracks "origin/feature"
 git checkout -t origin/feature
@@ -55,8 +55,8 @@ git push    origin_playground         master
 # in puppet: 
 git push    origin        HEAD:refs/for/master
 
-# if remote changes have occurred:
-# ===========================================================
+if remote changes have occurred:
+===========================================================
 git fetch        # do NOT use git pull (mingling fetch+merge)
 git merge [branch]
 
@@ -72,8 +72,8 @@ git rebase
 
 
 
-# analyse - all
-# ===========================================================
+analyse - all
+===========================================================
 gitk
 git log
 git log --oneline --decorate       #  Show branches, tags in git log
@@ -85,8 +85,8 @@ git name-rev --name-only 50f3754   #  tell us the position of a commit relative 
 git branch   --contains 50f3754    #  Find out which branch contains a change
 
 
-# analyse - current
-# ===========================================================
+analyse - current
+===========================================================
 git status
 git status -s                  # short
 git diff 
@@ -94,13 +94,13 @@ git diff --word-diff           # word wise git
 
 
 
-# squashing commits
-# ===========================================================
+squashing commits
+===========================================================
 # see git squash and pick
 
 
-# going back
-# ===========================================================
+going back
+===========================================================
 git reset --hard [target commit hash ] 
 # git reset --hard 48cffce1fe
 
