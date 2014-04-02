@@ -10,8 +10,8 @@ git config --global color.ui auto
 git config --global core.pager "less -FRSX"
 
 
-# prevent git from pushing ALL branches that have the same name on the remote
-git config --global push.default tracking  
+prevent git from pushing ALL branches that have the same name on the remote
+ git config --global push.default tracking  
 
 
 git remote add origin_playground git@github.com:pbberlin/playground.git
