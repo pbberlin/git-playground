@@ -125,8 +125,17 @@ See git squash and pick
 
     git rebase -i HEAD~3  # last three commits
     git rebase -i master
+
+```
+Ctrl \
+pick
+squash
+A
+```
     
     git rebase --abort  # abort 
+    
+    
 
 
 ## Going Back 
