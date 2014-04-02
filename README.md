@@ -14,6 +14,7 @@ TIP is the most recent commit of a branch.
     git config --global core.pager "less -FRSX"
 
 Prevent git from pushing ALL branches that have the same name on the remote
+
     git config --global push.default tracking  
 
 ### Init a Repository
