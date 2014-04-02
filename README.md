@@ -1,24 +1,24 @@
 init
 =================================================================================
-apt-get install git
-apt-get install gitk
 
-git config --global user.name  "Peter Buchmann"
-git config --global user.email "peter.buchmann@idealo.de"
+    apt-get install git
+    apt-get install gitk
 
-git config --global color.ui auto
-git config --global core.pager "less -FRSX"
+    git config --global user.name  "Peter Buchmann"
+    git config --global user.email "peter.buchmann@idealo.de"
 
+    git config --global color.ui auto
+    git config --global core.pager "less -FRSX"
 
 prevent git from pushing ALL branches that have the same name on the remote
- git config --global push.default tracking  
+    git config --global push.default tracking  
 
 
-git remote add origin_playground git@github.com:pbberlin/playground.git
-git clone
+    git remote add origin_playground git@github.com:pbberlin/playground.git
+    git clone
 
-# or
-git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git
+### or
+    git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git
 
 
 making changes
