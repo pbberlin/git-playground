@@ -2,7 +2,7 @@
 HEAD is the tip of the current branch.
 TIP is the most recent commit of a branch.
 
-## Init
+## Init Git itself
 
     apt-get install git
     apt-get install gitk
