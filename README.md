@@ -1,8 +1,8 @@
-## terms
+## Terms
 HEAD is the tip of the current branch.
 TIP is the most recent commit of a branch.
 
-## init
+## Init
 
     apt-get install git
     apt-get install gitk
@@ -13,20 +13,21 @@ TIP is the most recent commit of a branch.
     git config --global color.ui auto
     git config --global core.pager "less -FRSX"
 
-prevent git from pushing ALL branches that have the same name on the remote
+Prevent git from pushing ALL branches that have the same name on the remote
     git config --global push.default tracking  
 
+### Init a Repository
     git remote add origin_playground git@github.com:pbberlin/playground.git
     git clone
-
 or
     git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git
+    git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git  [target dir - distinct of {1}.git]
 
-komplett neues Repository anlegen
+Create a completely new Repository 
     cd [working dir]
     git init  
 
-rename remote repo
+Rename a remote repository
     git remote -v
     git remote rename [old_name]  [new_name]
 
@@ -37,7 +38,6 @@ creating and checking out a feature branch that tracks "origin/feature"
     git checkout -t origin/feature
 
     git branch [-d], checkout
-
 
     git add [files]                            # stage files, files I want push to repo ORIGIN or repo GERRIT
     git rm  [files]                            # unstage
@@ -50,40 +50,41 @@ Amend towards last commit
     git commit -a -m "my commit message"   --amend
 
 Amend towards a gerrit repo
-git commit  --amend			# push typos posthumously ,  omit -m
-#[im Editor]
-  <last change ID from http gerrit> ENTER ENTER [my amend comment]
+    git commit  --amend			# push typos posthumously ,  omit -m
+[im Editor]
+    <paste last change ID from http gerrit>ENTER
+    ENTER
+    [my amend comment]
 
 Adding notes
-   git notes add   # adding to last commit - does not change history
+    git notes add   # adding to last commit - does not change history
 
 
 
 ## Pushing - non puppet
-git push
-git push -u [remote_repo]            [branch]  # -u for upstream - setting up tracking , default for branch is current
-git push    origin_playground         master
+    git push
+    git push -u [remote_repo]                [branch]  # -u for upstream - setting up tracking , default for branch is current
+    git push -u  github_pbberlin_playground    master  #  example
+
 
 
 ## Pushing - to puppet
-git push    origin        HEAD:refs/for/master   # 
+    git push    origin        HEAD:refs/for/master   # 
 
-## if remote changes have occurred:
-   git fetch        # do NOT use git pull (mingling fetch+merge)
-   git merge [branch]
+## If Remote Changes have Occurred:
+    git fetch        # do NOT use git pull (mingling fetch+merge)
+    git merge [branch]
 
 For example
-   git merge github_pbberlin_playground/master
+    git merge github_pbberlin_playground/master
 
 
-   git mergetool
+    git mergetool
 
    
 Instead of merging, there is also rebase.
 Beware of rebasing towards public repos, cause it changes previous commits and forces other contributors to repeat their merging work.
-   git rebase
-
-
+   git rebase # extreme caution !
 
 
 # Analyse - big picture
@@ -117,4 +118,3 @@ For example
 
 ## Preserve Uncommitted Changes when Changing Branches
     git stash
-
