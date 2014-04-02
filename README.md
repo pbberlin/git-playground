@@ -123,6 +123,7 @@ Beware of rebasing towards public repos, cause it changes previous commits and f
 ## Squashing Commits
 See git squash and pick
 
+    git rebase -i HEAD~3  # last three commits
     git rebase -i master
 
 
