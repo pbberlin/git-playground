@@ -80,7 +80,7 @@ Adding notes
 
 ### Pushing - to Gerrit
 Here we push to the magic branch that creates reviews that target the master branch. 
-For every branch Gerrit tracks there is a magic refs/for/<branch_name> that you push to to create reviews.
+For every branch Gerrit tracks there is a magic refs/for/<branch_name> that you push to create reviews.
 
     git push    origin        HEAD:refs/for/master   
 
@@ -122,6 +122,8 @@ Beware of rebasing towards public repos, cause it changes previous commits and f
 
 ## Squashing Commits
 See git squash and pick
+
+    git rebase -i master
 
 
 ## Going Back 
