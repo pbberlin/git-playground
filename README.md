@@ -1,5 +1,4 @@
-init
-=================================================================================
+## init
 
     apt-get install git
     apt-get install gitk
@@ -17,25 +16,24 @@ prevent git from pushing ALL branches that have the same name on the remote
     git remote add origin_playground git@github.com:pbberlin/playground.git
     git clone
 
-### or
+or
     git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git
 
 
-making changes
-===========================================================
+## making changes
 
-# creating and checking out a feature branch that tracks "origin/feature"
-git checkout -t origin/feature
-
+creating and checking out a feature branch that tracks "origin/feature"
+    git checkout -t origin/feature
 
 
-git branch [-d], checkout
+
+    git branch [-d], checkout
 
 
-git add xxx                            #files I want push to gerrit
+    git add xxx                            #files I want push to gerrit
 
-git commit    -m "my commit message"   
-git commit -a -m "my commit message"   # -a => committing changes to ALL tracked files
+    git commit    -m "my commit message"   
+    git commit -a -m "my commit message"   # -a => committing changes to ALL tracked files
 
 
 git commit  --amend			# push typos posthumously , -m omit
