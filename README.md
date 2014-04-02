@@ -50,7 +50,7 @@ Amend towards last commit
     git commit -a -m "my commit message"   --amend
 
 Amend towards a gerrit repo
-    git commit  --amend			# push typos posthumously ,  omit -m
+    git commit  --amend            # push typos posthumously ,  omit -m
 [im Editor]
     <paste last change ID from http gerrit>ENTER
     ENTER
@@ -114,7 +114,7 @@ See git squash and pick
 For example
     git reset --hard 48cffce1fe
     
-# touch
+# touch1
     
     
     
