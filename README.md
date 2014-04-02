@@ -50,9 +50,11 @@ Amend towards last commit
     git commit -a -m "my commit message"   --amend
 
 Amend towards a gerrit repo
-git commit  --amend			# push typos posthumously ,  omit -m
-#[im Editor]
-  <last change ID from http gerrit> ENTER ENTER [my amend comment]
+    git commit  --amend			# push typos posthumously ,  omit -m
+[im Editor]
+    <paste last change ID from http gerrit>ENTER
+    ENTER
+    [my amend comment]
 
 Adding notes
    git notes add   # adding to last commit - does not change history
@@ -60,13 +62,13 @@ Adding notes
 
 
 ## Pushing - non puppet
-git push
-git push -u [remote_repo]            [branch]  # -u for upstream - setting up tracking , default for branch is current
-git push    origin_playground         master
+    git push
+    git push -u [remote_repo]            [branch]  # -u for upstream - setting up tracking , default for branch is current
+    git push    origin_playground         master
 
 
 ## Pushing - to puppet
-git push    origin        HEAD:refs/for/master   # 
+    git push    origin        HEAD:refs/for/master   # 
 
 ## if remote changes have occurred:
    git fetch        # do NOT use git pull (mingling fetch+merge)
@@ -82,8 +84,6 @@ For example
 Instead of merging, there is also rebase.
 Beware of rebasing towards public repos, cause it changes previous commits and forces other contributors to repeat their merging work.
    git rebase
-
-
 
 
 # Analyse - big picture
@@ -117,4 +117,3 @@ For example
 
 ## Preserve Uncommitted Changes when Changing Branches
     git stash
-
