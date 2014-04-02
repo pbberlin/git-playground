@@ -1,55 +1,53 @@
-# init
-# =================================================================================
-apt-get install git
-apt-get install gitk
+## init
 
-git config --global user.name  "Peter Buchmann"
-git config --global user.email "peter.buchmann@idealo.de"
+    apt-get install git
+    apt-get install gitk
 
-git config --global color.ui auto
-git config --global core.pager "less -FRSX"
+    git config --global user.name  "Peter Buchmann"
+    git config --global user.email "peter.buchmann@idealo.de"
 
-# prevent git from pushing ALL branches that have the same name on the remote
-git config --global push.default tracking  
+    git config --global color.ui auto
+    git config --global core.pager "less -FRSX"
 
+prevent git from pushing ALL branches that have the same name on the remote
+    git config --global push.default tracking  
 
-# komplett neues Repository anlegen
-cd [working dir]
-git init  
+    git remote add origin_playground git@github.com:pbberlin/playground.git
+    git clone
 
+or
+    git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git
 
-git remote add origin_playground git@github.com:pbberlin/playground.git
-git clone
+komplett neues Repository anlegen
+    cd [working dir]
+    git init  
 
-# or
-git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git
-
-# rename remote repo
+rename remote repo
     git remote -v
     git remote rename [old_name]  [new_name]
 
 
-# making changes
-# ===========================================================
+## making changes
 
-# creating and checking out a feature branch that tracks "origin/feature"
-git checkout -t origin/feature
-
+creating and checking out a feature branch that tracks "origin/feature"
+    git checkout -t origin/feature
 
 
-git branch [-d], checkout
+
+    git branch [-d], checkout
 
 
-git add [files]                            # stage files, files I want push to repo ORIGIN or repo GERRIT
-git rm  [files]                            # unstage
+    git add [files]                            # stage files, files I want push to repo ORIGIN or repo GERRIT
+    git rm  [files]                            # unstage
 
-git commit    -m "my commit message"   
+    git commit    -m "my commit message"   
 
-git commit -a -m "my commit message"   # -a => committing not just the staged files - since last ADD, but ALL
-git commit -a -m "my commit message"   --amend
+    git commit -a -m "my commit message"   # -a => committing not just the staged files - since last ADD, but ALL
+    git commit -a -m "my commit message"   --amend
 
 
-# Amend towards a gerrit repo
+
+Amend towards a gerrit repo
 git commit  --amend			# push typos posthumously ,  omit -m
 #[im Editor]
   <last change ID from http gerrit> ENTER ENTER [my amend comment]
@@ -67,8 +65,8 @@ git push    origin_playground         master
 # in puppet: 
 git push    origin        HEAD:refs/for/master
 
-# if remote changes have occurred:
-# ===========================================================
+if remote changes have occurred:
+===========================================================
 git fetch        # do NOT use git pull (mingling fetch+merge)
 git merge [branch]
 
@@ -84,8 +82,8 @@ git rebase
 
 
 
-# analyse - all
-# ===========================================================
+analyse - all
+===========================================================
 gitk
 git log
 git log --oneline --decorate       #  Show branches, tags in git log
@@ -97,8 +95,8 @@ git name-rev --name-only 50f3754   #  tell us the position of a commit relative 
 git branch   --contains 50f3754    #  Find out which branch contains a change
 
 
-# analyse - current
-# ===========================================================
+analyse - current
+===========================================================
 git status
 git status -s                  # short
 git diff 
@@ -106,13 +104,13 @@ git diff --word-diff           # word wise git
 
 
 
-# squashing commits
-# ===========================================================
+squashing commits
+===========================================================
 # see git squash and pick
 
 
-# going back
-# ===========================================================
+going back
+===========================================================
 git reset --hard [target commit hash ] 
 # git reset --hard 48cffce1fe
 
