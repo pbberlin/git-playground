@@ -36,7 +36,7 @@ Rename a remote repository
     git remote rename [old_name]  [new_name]
 
 
-## making changes
+# Making Changes
 
 creating and checking out a feature branch that tracks "origin/feature"
 
@@ -72,19 +72,19 @@ Adding notes
 
 
 
-## Pushing - non Gerrit
+### Pushing - non Gerrit
     git push
     git push -u [remote_repo]            [branch]  # -u for upstream - setting up tracking , default for branch is current
     git push -u  github_pbberlin_playground    master  #  example
 
 
-## Pushing - to Gerrit
+### Pushing - to Gerrit
 Here we push to the magic branch that creates reviews that target the master branch. 
-For every branch Gerrit tracks there is a magic refs/for/<branch_name> that you push to to create reviews.
+For every branch Gerrit tracks there is a magic refs/for/<branch_name> that you push to create reviews.
 
     git push    origin        HEAD:refs/for/master   
 
-## If Remote Changes have Occurred:
+### If Remote Changes have Occurred:
     git fetch        # do NOT use git pull (mingling fetch+merge)
     git merge [branch]
 
@@ -122,6 +122,9 @@ Beware of rebasing towards public repos, cause it changes previous commits and f
 
 ## Squashing Commits
 See git squash and pick
+
+    git rebase -i HEAD~3  # last three commits
+    git rebase -i master
 
 
 ## Going Back 
