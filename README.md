@@ -113,6 +113,12 @@ See git squash and pick
     git reset --hard [target commit hash ] 
 For example
     git reset --hard 48cffce1fe
+    
+# touch
+    
+    
+    
+    
 
 
 ## Preserve Uncommitted Changes when Changing Branches
