@@ -1,3 +1,7 @@
+## terms
+HEAD is the tip of the current branch.
+TIP is the most recent commit of a branch.
+
 ## init
 
     apt-get install git
@@ -32,8 +36,6 @@ rename remote repo
 creating and checking out a feature branch that tracks "origin/feature"
     git checkout -t origin/feature
 
-
-
     git branch [-d], checkout
 
 
@@ -43,79 +45,76 @@ creating and checking out a feature branch that tracks "origin/feature"
     git commit    -m "my commit message"   
 
     git commit -a -m "my commit message"   # -a => committing not just the staged files - since last ADD, but ALL
+
+Amend towards last commit
     git commit -a -m "my commit message"   --amend
-
-
 
 Amend towards a gerrit repo
 git commit  --amend			# push typos posthumously ,  omit -m
 #[im Editor]
   <last change ID from http gerrit> ENTER ENTER [my amend comment]
 
-git notes add   # adding to last commit - does not change history
+Adding notes
+   git notes add   # adding to last commit - does not change history
 
 
 
-# non puppet: 
+## Pushing - non puppet
 git push
 git push -u [remote_repo]            [branch]  # -u for upstream - setting up tracking , default for branch is current
 git push    origin_playground         master
 
 
-# in puppet: 
-git push    origin        HEAD:refs/for/master
+## Pushing - to puppet
+git push    origin        HEAD:refs/for/master   # 
 
-if remote changes have occurred:
-===========================================================
-git fetch        # do NOT use git pull (mingling fetch+merge)
-git merge [branch]
+## if remote changes have occurred:
+   git fetch        # do NOT use git pull (mingling fetch+merge)
+   git merge [branch]
 
-git merge origin_playground/master
-
-
-git mergetool
-git rebase
+For example
+   git merge github_pbberlin_playground/master
 
 
+   git mergetool
 
-
-
-
-
-analyse - all
-===========================================================
-gitk
-git log
-git log --oneline --decorate       #  Show branches, tags in git log
-
-git show 50f3754                   #  info on a commit
-git show :/fix                     #  the last commit which has the word "fix" in its message
-git show :/^Merge                  #  shows the last merge commit
-git name-rev --name-only 50f3754   #  tell us the position of a commit relative to tags
-git branch   --contains 50f3754    #  Find out which branch contains a change
-
-
-analyse - current
-===========================================================
-git status
-git status -s                  # short
-git diff 
-git diff --word-diff           # word wise git
+   
+Instead of merging, there is also rebase.
+Beware of rebasing towards public repos, cause it changes previous commits and forces other contributors to repeat their merging work.
+   git rebase
 
 
 
-squashing commits
-===========================================================
-# see git squash and pick
+
+# Analyse - big picture
+    gitk
+    git log
+    git log --oneline --decorate       #  Show branches, tags in git log
+
+    git show 50f3754                   #  info on a commit
+    git show :/fix                     #  the last commit which has the word "fix" in its message
+    git show :/^Merge                  #  shows the last merge commit
+    git name-rev --name-only 50f3754   #  tell us the position of a commit relative to tags
+    git branch   --contains 50f3754    #  Find out which branch contains a change
 
 
-going back
-===========================================================
-git reset --hard [target commit hash ] 
-# git reset --hard 48cffce1fe
+# Analyse - current commit
+    git status
+    git status -s                  # short
+    git diff 
+    git diff --word-diff           # word wise git
 
 
-# preserve uncommitted changes when changing branches
-# ===========================================================
-git stash
+## Squashing Commits
+See git squash and pick
+
+
+## Going Back 
+    git reset --hard [target commit hash ] 
+For example
+    git reset --hard 48cffce1fe
+
+
+## Preserve Uncommitted Changes when Changing Branches
+    git stash
 
