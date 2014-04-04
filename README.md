@@ -109,6 +109,8 @@ Beware of rebasing towards public repos, cause it changes previous commits and f
     
     git log
     git log --oneline --decorate       #  Show branches, tags in git log
+    git log --author="Jon"
+    git log --author="\(Adam\)\|\(Jon\)"
 
     git show 50f3754                   #  info on a commit
     git show :/fix                     #  the last commit which has the word "fix" in its message
