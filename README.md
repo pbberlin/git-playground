@@ -86,19 +86,25 @@ For every branch Gerrit tracks there is a magic refs/for/<branch_name> that you 
 
 ### If Remote Changes have Occurred:
     git fetch        # do NOT use git pull (mingling fetch+merge)
-    git merge [branch]
+    git merge [repo]/[branch]
 
 For example
 
-    git merge github_pbberlin_playground/master
+    git merge github_pbberlin_playground/master      # merging remote master (after git fetch)
+    git merge                            issue56     # merging local branch issue56
     git mergetool
 
    
 Instead of merging, there is also rebase.
 
-Beware of rebasing towards public repos, cause it changes previous commits and forces other contributors to repeat their merging work.
+    git pull --rebase 
+
+Or even
 
     git rebase # extreme caution !
+
+Beware of rebasing towards public repos, cause it changes previous commits and forces other contributors to repeat their merging work.
+
 
 
 # Analyse - big picture
