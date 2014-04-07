@@ -1,6 +1,7 @@
 ## Terms
 HEAD is the tip of the current branch.
 TIP is the most recent commit of a branch.
+ORIGIN is an alias for the remote repository. It is created by git clone, during cloning
 
 ## Init Git itself
 
@@ -43,6 +44,16 @@ Rename a remote repository
     git remote -v
     git remote rename [old_name]  [new_name]
 
+
+Check a remote repository
+    
+    git remote show origin
+
+Here we also see
+* new remote branches (remotely created)
+* stale remote branches (remotely deleted)
+* remote "tracked" branches
+* automatically pushed/merged branches
 
 
 # Making Changes
