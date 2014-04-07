@@ -30,10 +30,19 @@ Create a completely new Repository
     cd [working dir]
     git init  
 
+Change remote repository URL from https to ssh
+
+    git remote set-url origin ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git
+    cd .git/hooks/
+    scp -P 29418 peter.buchmann@gerrit.ipx:hooks/commit-msg .
+
+
+
 Rename a remote repository
 
     git remote -v
     git remote rename [old_name]  [new_name]
+
 
 
 # Making Changes
@@ -86,19 +95,25 @@ For every branch Gerrit tracks there is a magic refs/for/<branch_name> that you 
 
 ### If Remote Changes have Occurred:
     git fetch        # do NOT use git pull (mingling fetch+merge)
-    git merge [branch]
+    git merge [repo]/[branch]
 
 For example
 
-    git merge github_pbberlin_playground/master
+    git merge github_pbberlin_playground/master      # merging remote master (after git fetch)
+    git merge                            issue56     # merging local branch issue56
     git mergetool
 
    
 Instead of merging, there is also rebase.
 
-Beware of rebasing towards public repos, cause it changes previous commits and forces other contributors to repeat their merging work.
+    git pull --rebase 
+
+Or even
 
     git rebase # extreme caution !
+
+Beware of rebasing towards public repos, cause it changes previous commits and forces other contributors to repeat their merging work.
+
 
 
 # Analyse - big picture
