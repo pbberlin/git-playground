@@ -105,6 +105,8 @@ For every branch Gerrit tracks there is a magic refs/for/<branch_name> that you 
     git push    origin        HEAD:refs/for/master   
 
 ### If Remote Changes have Occurred:
+### on CONFLICTS
+
     git fetch        # do NOT use git pull (mingling fetch+merge)
     git merge [repo]/[branch]
 
@@ -113,6 +115,13 @@ For example
     git merge github_pbberlin_playground/master      # merging remote master (after git fetch)
     git merge                            issue56     # merging local branch issue56
     git mergetool
+
+#### if nothing else helps
+
+    git checkout --ours   filename.c    # ours and theirs are constant options
+    git checkout --theirs filename.c
+    git add filename.c
+    git commit -m "using theirs"
 
    
 Instead of merging, there is also rebase.
@@ -137,6 +146,9 @@ Beware of rebasing towards public repos, cause it changes previous commits and f
     git log --oneline --decorate       #  Show branches, tags in git log
     git log --author="Jon"
     git log --author="\(Adam\)\|\(Jon\)"
+    
+    git log -- [path]
+    git log -- modules/site_idealo/manifests/role/role_mysql.pp    
 
     git show 50f3754                   #  info on a commit
     git show :/fix                     #  the last commit which has the word "fix" in its message
