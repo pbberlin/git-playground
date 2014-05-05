@@ -29,7 +29,8 @@ or
 Create a completely new Repository 
 
     cd [working dir]
-    git init  
+    git init
+    git push originXX master
 
 Change remote repository URL from https to ssh
 
