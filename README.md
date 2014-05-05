@@ -71,6 +71,7 @@ creating and checking out a feature branch that tracks "origin/feature"
     git commit    -m "my commit message"   
 
     git commit -a -m "my commit message"   # -a => committing not just the staged files - since last ADD, but ALL
+    git commit  -a -m --allow-empty-message
 
 Amend towards last commit
 
