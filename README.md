@@ -18,6 +18,14 @@ Prevent git from pushing ALL branches that have the same name on the remote
 
     git config --global push.default tracking  
 
+### Remove a Repository
+If the folder is the top level of a git repository, 
+and you actually want to completely remove the entire git repo associated with the folder, 
+then simply delete the (hidden) .git directory from the folder:
+
+    cd foldername
+    rm -r .git 
+
 ### Init a Repository
     git remote add origin_playground git@github.com:pbberlin/playground.git
     git clone
