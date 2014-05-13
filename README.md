@@ -27,6 +27,7 @@ then simply delete the (hidden) .git directory from the folder:
     rm -r .git 
 
 ### Init a Repository
+    git init
     git remote add origin_playground git@github.com:pbberlin/playground.git
     git clone
 or
