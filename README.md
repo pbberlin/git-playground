@@ -28,10 +28,13 @@ then simply delete the (hidden) .git directory from the folder:
 
 ### Init a Repository
     git init
-    git remote add origin_playground git@github.com:pbberlin/playground.git
+    git remote add     origin_playground git@github.com:pbberlin/playground.git
     git clone
 or
+    git remote add     origin_playground https://github.com/pbberlin/graphite-setup-debian.git
+    git remote set-url origin_playground https://github.com/pbberlin/graphite-setup-debian.git
 
+or
     git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git
     git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git  [target dir - distinct of {1}.git]
 
