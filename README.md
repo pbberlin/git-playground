@@ -30,6 +30,7 @@ then simply delete the (hidden) .git directory from the folder:
     git init
     git remote add     origin_playground git@github.com:pbberlin/playground.git
     git clone
+
 or
     git remote add     origin_playground https://github.com/pbberlin/graphite-setup-debian.git
     git remote set-url origin_playground https://github.com/pbberlin/graphite-setup-debian.git
