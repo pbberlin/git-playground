@@ -34,10 +34,12 @@ then simply delete the (hidden) .git directory from the folder:
 or
     git remote add     origin_playground https://github.com/pbberlin/graphite-setup-debian.git
     git remote set-url origin_playground https://github.com/pbberlin/graphite-setup-debian.git
+    
 
 or
     git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git
     git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git  [target dir - distinct of {1}.git]
+    
 
 Create a completely new Repository 
 
