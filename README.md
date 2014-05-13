@@ -42,6 +42,8 @@ or
 
     git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git
     git clone ssh://peter.buchmann@gerrit.ipx:29418/Puppet.git  [target dir - distinct of {1}.git]
+    git clone https://github.com/pbberlin/graphite-setup-debian.git
+    
     
 
 Create a completely new Repository 
