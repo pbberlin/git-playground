@@ -9,7 +9,7 @@ ORIGIN is an alias for the remote repository. It is created by git clone, during
     apt-get install gitk
 
     git config --global user.name  "Peter Buchmann"
-    git config --global user.email "peter.buchmann@idealo.de"
+    git config --global user.email "peter.buchmann@web.de"
 
     git config --global color.ui auto
     git config --global core.pager "less -FRSX"
