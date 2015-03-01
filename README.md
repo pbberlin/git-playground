@@ -216,3 +216,7 @@ For example
 
 
 # marker
+
+
+# remember login and password
+    git config --global credential.helper cache
