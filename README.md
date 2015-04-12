@@ -220,3 +220,4 @@ For example
 
 # remember login and password
     git config --global credential.helper cache
+    git config --global credential.helper store
