@@ -221,5 +221,6 @@ For example
 # remember login and password
 
 http://git-scm.com/docs/git-credential-store
+
     git config --global credential.helper cache
     git config --global credential.helper store
