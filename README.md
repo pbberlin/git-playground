@@ -184,9 +184,7 @@ Beware of rebasing towards public repos, cause it changes previous commits and f
     git status -s                  # short
     git diff 
     git diff --word-diff           # word wise git
-    
-# Analyse recent commits
-    git diff --name-status HEAD~2..HEAD~1
+    git diff --name-status   HEAD~2..HEAD~1
 
 
 ## Squashing Commits
