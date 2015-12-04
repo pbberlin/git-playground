@@ -18,6 +18,15 @@ Prevent git from pushing ALL branches that have the same name on the remote
 
     git config --global push.default tracking  
 
+### remember login and password
+
+http://git-scm.com/docs/git-credential-store
+
+    git config --global credential.helper cache
+    git config --global credential.helper store
+
+
+
 ### Remove a Repository
 If the folder is the top level of a git repository, 
 and you actually want to completely remove the entire git repo associated with the folder, 
@@ -216,12 +225,10 @@ For example
     git stash
 
 
-# marker
+
+# "non-bare" repo
+
+On error Git push error '[remote rejected] master -> master (branch is currently checked out)'
 
 
-# remember login and password
-
-http://git-scm.com/docs/git-credential-store
-
-    git config --global credential.helper cache
-    git config --global credential.helper store
+    git config --bool core.bare true
