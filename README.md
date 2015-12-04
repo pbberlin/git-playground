@@ -18,7 +18,7 @@ Prevent git from pushing ALL branches that have the same name on the remote
 
     git config --global push.default tracking  
 
-### remember login and password
+### Remember login and password
 
 http://git-scm.com/docs/git-credential-store
 
@@ -226,7 +226,7 @@ For example
 
 
 
-# "non-bare" repo
+## "non-bare" repo
 
 On error Git push error '[remote rejected] master -> master (branch is currently checked out)'
 
