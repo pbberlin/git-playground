@@ -135,6 +135,11 @@ For every branch Gerrit tracks there is a magic refs/for/<branch_name> that you 
 
     git push    origin        HEAD:refs/for/master   
 
+
+### Check for remote changes:
+    git remote update
+    git status origin
+
 ### If Remote Changes have Occurred:
 ### on CONFLICTS
 
